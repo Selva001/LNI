@@ -129,13 +129,13 @@ function searchProducts() {
     Replace this number with your actual WhatsApp number.
 
     Example:
-    const whatsappNumber = "9066267607";
+    const whatsappNumber = "919876543210";
 
     Do not use:
-    +91 9066267607
+    +91 98765 43210
 */
 
-const whatsappNumber = "9066267607";
+const whatsappNumber = "91XXXXXXXXXX";
 
 
 const enquiryForm =
@@ -208,8 +208,9 @@ Please contact me regarding my bakery project.`;
         whatsappURL,
         "_blank"
     );
-// Clear all form fields
-enquiryForm.reset();
+
+    // Clear the enquiry form after submission
+    enquiryForm.reset();
 
 });
 
