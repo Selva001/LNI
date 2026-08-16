@@ -256,3 +256,48 @@ if (footerYear) {
         `© ${currentYear} LNI BAKE Automation. All Rights Reserved.`;
 
 }
+
+/* =========================================================
+   BAKERY STARTUP SECTION
+   ========================================================= */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const startupSection =
+        document.querySelector(".bakery-startup");
+
+    if (!startupSection) return;
+
+    const cards =
+        startupSection.querySelectorAll(
+            ".startup-flow-item, .journey-card"
+        );
+
+    const observer =
+        new IntersectionObserver(
+            function (entries) {
+
+                entries.forEach(function (entry) {
+
+                    if (entry.isIntersecting) {
+
+                        entry.target.classList.add(
+                            "startup-visible"
+                        );
+
+                    }
+
+                });
+
+            },
+            {
+                threshold: 0.15
+            }
+        );
+
+    cards.forEach(function (card) {
+        observer.observe(card);
+    });
+
+});
+
